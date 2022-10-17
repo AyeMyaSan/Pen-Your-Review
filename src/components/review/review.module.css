@@ -1,0 +1,106 @@
+@value myLightPurple, myLightGrey, myDarkGrey, myShadow , myRed, myLightGrey, myCrimson from '/src/common/colors.css';
+@value mediaQuery from '/src/common/size.css';
+
+.review {
+  display: flex;
+  width: 100%;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  transition: all 300ms ease;
+  box-shadow: 5px 5px 10px myLightPurple;
+  overflow-x: hidden;
+}
+
+.review:hover {
+  background: lemonchiffon;
+}
+
+.thumbnail {
+  object-fit: none;
+}
+
+.contents {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+
+.title {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.comment {
+  padding: 0.5rem 1rem;
+  max-height: 10rem;
+  overflow: auto;
+}
+
+.iconL {
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  color: myDarkGrey;
+}
+
+.iconR {
+  margin-left: 0.5rem;
+  margin-bottom: 0.3rem;
+  color: myDarkGrey;
+}
+
+.button {
+  border: 0;
+  color: black;
+  background: transparent;
+  height: 2rem;
+  font-size: 1.2rem;
+  transition: all 300ms ease;
+}
+
+.button:hover {
+  color: myRed;
+  transform: rotate(0.1turn);
+}
+
+.rating {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.score {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: myPurple;
+}
+
+.starRatings {
+  margin-top: 0.2rem;
+  transform: translateX(42%);
+}
+
+.ratingBase {
+  position: absolute;
+  width: 75px;
+  color: myLightGrey;
+  overflow: hidden;
+  cursor: default;
+  white-space: nowrap;
+}
+
+.ratingFill {
+  position: absolute;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: default;
+  color: myCrimson;
+}
+
+@media screen and (max-width: mediaQuery) {
+  .starRatings {
+    transform: translateX(38%);
+  }
+}

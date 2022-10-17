@@ -1,0 +1,91 @@
+@value myPurple,myLightGrey, myYellow from '/src/common/colors.css';
+@value mediaQuery from '/src/common/size.css';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.main {
+  width: 100%;
+  display: flex;
+  padding: 0 0.5rem;
+  justify-content: center;
+}
+
+.movieList {
+  flex-basis: 50%;
+  border-right: 1px solid myLightGrey;
+}
+
+.diary {
+  flex-basis: 50%;
+}
+
+.arrowBtn {
+  display: none;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 1rem;
+}
+
+.loading {
+  width: 10em;
+  height: 10em;
+  border-radius: 50%;
+  border: 15px solid myLightGrey;
+  border-top: 15px solid myPurple;
+  animation: spin 2s linear infinite; /*2초동안 linear하게 spin하는걸 infinite하게 반복*/
+}
+
+@keyframes spin {
+  0% /*시작지점*/ {
+    transform: rotate(0deg);
+  }
+
+  100% /*끝지점*/ {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: mediaQuery) {
+  .container {
+    width: 100%;
+  }
+
+  .main {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .movieList {
+    border-right: none;
+  }
+
+  .diary {
+    border-top: 1px solid myLightGrey;
+  }
+
+  .arrowBtn {
+    display: block;
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    font-size: 1.8rem;
+    background: myPurple;
+    z-index: 99;
+  }
+}

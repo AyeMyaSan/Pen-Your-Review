@@ -1,0 +1,26 @@
+@value mediaQuery from '/src/common/size.css';
+
+* {
+  box-sizing: border-box;
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.component {
+  top: 50%;
+  transform: translateY(50%);
+}
+
+@media screen and (max-width: mediaQuery) {
+  .component {
+    transform: translateY(0);
+    width: 100%;
+  }
+  .container {
+    width: 100%;
+  }
+}

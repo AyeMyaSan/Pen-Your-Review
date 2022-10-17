@@ -1,0 +1,14 @@
+@value myLightGrey from '/src/common/colors.css';
+
+.diary {
+  width: 100%;
+}
+
+.empty {
+  text-align: center;
+  min-height: 16rem;
+}
+
+.reviewArea {
+  border-top: 1px solid myLightGrey;
+}

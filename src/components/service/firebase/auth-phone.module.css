@@ -1,0 +1,67 @@
+@value myPurple, myShadow, myLightPurple, myYellow from '/src/common/colors.css';
+@value mediaQuery from '/src/common/size.css';
+
+.authPhone {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background: myPurple;
+  width: 100%;
+  padding: 2.5rem;
+}
+
+.authPhone:hover {
+  box-shadow: 5px 5px 10px myShadow;
+}
+
+.title {
+  margin-top: 0;
+  font-family: 'Lobster', cursive;
+}
+
+.input {
+  display: flex;
+  justify-content: center;
+  margin: 0.5rem 0;
+}
+
+.phoneNumber,
+.verifyNumber {
+  padding: 0.5rem;
+  margin: 0 0.5rem;
+  outline: 0;
+  border: none;
+  font-size: 1.2rem;
+  width: 60%;
+}
+
+.button {
+  outline: 0;
+  padding: 1rem;
+  font-weight: bolder;
+  font-size: 1rem;
+  cursor: pointer;
+  background: myLightPurple;
+  font-family: 'Nanum Gothic', sans-serif;
+  flex-wrap: nowrap;
+}
+
+.button:hover {
+  background-color: myYellow;
+}
+
+@media screen and (max-width: mediaQuery) {
+  .authPhone {
+    height: 100vh;
+  }
+  .input {
+    flex-direction: column;
+  }
+  .phoneNumber,
+  .verifyNumber {
+    width: 100%;
+    margin: 0;
+    padding: 1rem 0.5rem;
+  }
+}
